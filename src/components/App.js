@@ -13,7 +13,7 @@ function App() {
       the browser as you write your code; and good luck! */}
       <About blogImg = {blogData.image} blogAbout = {blogData.about}/>
       <Header blogName = {blogData.name}/>
-      <ArticleList />
+      <ArticleList blogArray = {blogData.posts}/>
     </div>
   );
 }

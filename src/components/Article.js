@@ -1,14 +1,15 @@
 import React from "react";
 
-function Article(props){
+function Article({blogStuff}){
+
+    console.log()
+
     return (
-        <div className="Article">
-            <article key={props.blogStuff}>
-                <h3>{props.blogStuff.title}</h3>
-                <small>{props.blogStuff.date}</small>
-                <p>{props.blogStuff.preview}</p>
+            <article key={blogStuff.id}>
+                <h3>{blogStuff.title}</h3>
+                <small>{blogStuff.date}</small>
+                <p>{blogStuff.preview}</p>
             </article>
-        </div>
     )
 }
 

@@ -1,23 +1,24 @@
 import React from "react";
 import Article from "./Article"
-import blogData from "../data/blog";
 
 //console.log(blogData);
 
-function ArticleList() {
+function ArticleList({blogArray}) {
     
-    const blogArray = blogData.posts
+    let array = []
 
-    const blogElements = blogArray.map((posts) => {
-        return <Article blogStuff = {posts}/>
+    if(blogArray && blogArray.map){
+        array = blogArray
+    }
+
+    const blogElements = array.map((post) => {
+        return (<Article blogStuff = {post}/>)
     })
 
     return (
-        <div className="ArticleList">
             <main>
                 {blogElements}
             </main>
-        </div>
     )
 }
 

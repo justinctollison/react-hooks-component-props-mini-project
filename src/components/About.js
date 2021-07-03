@@ -1,13 +1,12 @@
 import React from "react";
 
-function About(props){
+function About({blogAbout, blogImg = "https://via.placeholder.com/215"}){
+
     return (
-        <div className="About">
             <aside>
-                <img src={props.blogImg} defaultValue="https://via.placeholder.com/215" alt="blog logo"></img>
-                <p>{props.blogAbout}</p>
+                <img src={blogImg} alt="blog logo"></img>
+                <p>{blogAbout}</p>
             </aside>
-        </div>
     )
 }
 
